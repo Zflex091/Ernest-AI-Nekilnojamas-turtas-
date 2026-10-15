@@ -1,0 +1,171 @@
+/* SOLVED Estates — phone layout. Desktop rules remain in design.css. */
+@media (max-width: 760px) {
+  .container { width: min(calc(100% - 48px), var(--max)); }
+  .section-pad { padding-block: 72px; }
+  .eyebrow, .section-index, .feature-number, .footer-label { font-size: .67rem; letter-spacing: .18em; }
+
+  /* Navigation: clear controls with comfortable touch targets. */
+  .header-inner { width: calc(100% - 32px); gap: 0; }
+  .brand { font-size: 1.25rem; }
+  .header-actions { gap: 0; }
+  .header-contact { width: 44px; height: 44px; }
+  .header-contact svg { width: 19px; height: 19px; }
+  .header-contact .whatsapp-mark { width: 21px; height: 21px; }
+  .menu-toggle { position: relative; flex: 0 0 44px; width: 44px; height: 44px; padding: 0; margin-left: 2px; }
+  .menu-toggle span { position: absolute; left: 11px; top: calc(50% - 5px); width: 22px; height: 2px; transform: none; transition: top .28s ease, transform .28s ease; }
+  .menu-toggle span:last-child { top: calc(50% + 5px); }
+  .menu-toggle[aria-expanded=true] span:first-child { top: 50%; transform: rotate(45deg); }
+  .menu-toggle[aria-expanded=true] span:last-child { top: 50%; transform: rotate(-45deg); }
+  .mobile-nav:not([hidden]) { padding: 18px 24px 36px; background: var(--paper); }
+  .mobile-nav > a { min-height: 62px; padding: 14px 0; font-family: Newsreader,Georgia,serif; font-size: 1.85rem; font-weight: 500; letter-spacing: -.03em; }
+  .mobile-nav > a svg { width: 20px; height: 20px; }
+  .mobile-contact { padding-top: 10px; margin-top: 8px; border-top: 0; font-size: .83rem; }
+
+  /* A compact introduction leaves room for the photography. */
+  .home-hero-layout { gap: 34px; padding-block: 54px 64px; }
+  .home-hero-content { padding: 0; }
+  .home-hero-content .eyebrow { margin-bottom: 25px; }
+  .home-hero h1 { margin-bottom: 20px; font-size: clamp(4rem, 13vw, 5.2rem); }
+  .hero-intro { max-width: 32ch; margin-bottom: 26px; font-size: 1.04rem; line-height: 1.55; }
+  .hero-actions, .inner-hero-actions { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 9px; }
+  .hero-actions .button, .inner-hero-actions .button { width: 100%; min-width: 0; min-height: 56px; padding-left: 12px; gap: 4px; justify-content: space-between; font-size: .77rem; line-height: 1.2; }
+  .hero-actions .button span, .inner-hero-actions .button span { min-width: 0; }
+  .hero-actions .button svg, .inner-hero-actions .button svg { width: 39px; height: 54px; padding: 11px; }
+  .home-hero-visual { height: clamp(280px, 80vw, 365px); }
+  .home-hero-visual figcaption, .pathway-photo figcaption, .story-photo figcaption { display: none; }
+
+  /* The home page reads as a sequence rather than three unrelated cards. */
+  .intro-section .section-heading { margin-bottom: 35px; }
+  .intro-section .section-heading h2 { font-size: clamp(3.15rem, 9vw, 4.8rem); }
+  .feature-grid { display: block; border-top: 1px solid var(--line); }
+  .feature, .feature + .feature,
+  .feature-fee, .feature-person {
+    display: block;
+    min-height: 0;
+    padding: 28px 0 32px !important;
+    border: 0 !important;
+    border-bottom: 1px solid var(--line) !important;
+    background: transparent;
+    color: var(--ink);
+    overflow: visible;
+  }
+  .feature-fee .feature-number, .feature-person .feature-number { color: var(--accent); }
+  .feature-fee p, .feature-person p { color: var(--muted); }
+  .feature-content .feature-big, .feature-content .feature-title { margin: 20px 0 11px; font-size: clamp(2.9rem, 10vw, 4rem); }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { font-size: .98rem; line-height: 1.6; }
+  .feature-person .contact-strip { margin-top: 18px; gap: 12px 18px; }
+  .feature-process, .feature + .feature.feature-process {
+    position: relative;
+    min-height: 258px;
+    margin-top: 25px;
+    padding: 26px !important;
+    border: 0 !important;
+    overflow: hidden;
+    color: #fff;
+    background: #3c403f;
+  }
+  .feature-process .feature-number, .feature-process p { color: #fff; }
+  .feature-process .feature-content { margin-top: 35px; }
+  .feature-process .feature-title { font-size: clamp(2.8rem, 9vw, 3.5rem); }
+  .feature:hover { transform: none; }
+
+  .pathway-section { padding-block: 68px 76px; }
+  .pathway-grid { gap: 28px; }
+  .pathway-intro h2 { margin: 18px 0 28px; font-size: clamp(3.15rem, 9vw, 4.5rem); }
+  .pathway-photo { height: 230px; }
+  .pathway-list a { min-height: 83px; grid-template-columns: 37px 1fr 38px; gap: 10px; }
+  .pathway-list strong { font-size: clamp(1.65rem, 6.5vw, 2.15rem); }
+  .pathway-list i { width: 36px; height: 36px; }
+
+  /* Service and about pages use a calmer, more legible rhythm. */
+  .inner-hero { padding: 47px 0 62px; }
+  .inner-hero-grid { gap: 0; }
+  .inner-hero h1 { margin-bottom: 0; font-size: clamp(3.4rem, 11.5vw, 4.65rem); line-height: .94; }
+  .inner-hero-copy > p:not(.eyebrow) { margin: 25px 0 0; padding-left: 18px; font-size: 1.18rem; line-height: 1.34; }
+  .inner-hero-actions { margin-top: 30px; }
+  .inner-hero-photo { height: 250px; min-height: 0; margin-top: 35px; }
+  .inner-hero-photo img { height: 100%; min-height: 0; }
+  .inner-hero-photo::after { inset: 12px; }
+  .service-story { padding-block: 72px; }
+  .service-story .story-grid { gap: 28px; }
+  .service-story .story-content .section-index { margin-bottom: 22px; }
+  .service-story .story-content h2 { margin-bottom: 21px; font-size: clamp(2.85rem, 9vw, 3.7rem); line-height: 1.01; }
+  .service-story .story-content p { font-size: 1.03rem; line-height: 1.65; }
+  .story-photo { height: 270px; }
+  .process-section { padding-block: 70px 76px; }
+  .process-layout { grid-template-rows: auto 235px auto; row-gap: 24px; }
+  .process-heading { margin: 0; }
+  .process-heading .eyebrow { margin-bottom: 14px; }
+  .process-heading h2 { font-size: clamp(2.65rem, 8.4vw, 3.5rem); }
+  .process-photo { height: 235px; }
+  .process-item { grid-template-columns: 38px 1fr; gap: 12px; padding: 22px 0; }
+  .process-item h3 { font-size: 1.72rem; }
+  .process-item p { font-size: .92rem; line-height: 1.58; }
+  .service-statement { min-height: 0; padding-block: 65px; }
+  .service-statement p { font-size: clamp(2.65rem, 8.7vw, 3.6rem); }
+
+  /* A short image transition and a distinct light footer. */
+  .closing-photo { min-height: 205px; }
+  .closing-text { padding: 46px 24px 54px; }
+  .closing-text .eyebrow { margin-bottom: 19px; }
+  .closing-text h2 { margin-bottom: 23px; font-size: clamp(3rem, 9vw, 4rem); line-height: .97; }
+  .closing-copy { gap: 18px; }
+  .footer { background: var(--sand); color: var(--ink); }
+  .footer-main { grid-template-columns: 1fr; gap: 30px; padding: 47px 0 36px; }
+  .footer-brand { grid-column: 1; }
+  .footer-links { gap: 12px; font-size: .86rem; }
+  .footer-links:nth-child(2) { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 16px; row-gap: 14px; }
+  .footer-links:nth-child(2) .footer-label { grid-column: 1 / -1; }
+  .footer-links:nth-child(3) { padding-top: 24px; border-top: 1px solid var(--line); }
+  .footer-label { margin-bottom: 3px; color: var(--accent); }
+  .footer-bottom { padding: 20px 0 24px; border-color: var(--line); color: var(--muted); font-size: .7rem; }
+
+  /* Contact and valuation forms have full-width section surfaces on phones. */
+  .contact-main { padding-block: 54px 0; }
+  .contact-layout { gap: 0; }
+  .contact-layout h1 { font-size: clamp(2.75rem, 9.5vw, 3.5rem); }
+  .contact-methods { margin-top: 27px; }
+  .contact-methods a { min-height: 93px; padding: 20px 0; grid-template-columns: 26px minmax(0,1fr) 18px; gap: 14px; }
+  .contact-methods strong { font-size: 1.58rem; }
+  .contact-methods b { font-size: .82rem; }
+  .contact-photo { height: 195px; margin: 30px 0 48px; }
+  .form-panel { margin-inline: -24px; padding: 39px 24px 47px; border: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .form-panel h2 { margin-bottom: 25px; font-size: clamp(2.7rem, 9vw, 3.4rem); }
+  .enquiry-form { gap: 19px; }
+  .field { gap: 9px; font-size: .83rem; }
+  .field input, .field textarea, .field select { min-height: 52px; font-size: 16px; }
+  .field textarea { min-height: 128px; }
+  .choice-field legend { font-size: .83rem; }
+  .choice-list { gap: 8px; }
+  .choice-list span { display: flex; align-items: center; min-height: 44px; padding: 10px 13px; font-size: .8rem; }
+  .form-note { line-height: 1.5; }
+  .valuation-hero { padding: 60px 0 67px; }
+  .valuation-hero h1 { font-size: clamp(3.55rem, 11vw, 4.65rem); }
+  .valuation-hero .button { margin-top: 18px; }
+  .valuation-photo { height: 275px; }
+  .valuation-body { padding-block: 70px 0; }
+  .valuation-layout { gap: 52px; }
+  #valuation-form { scroll-margin-top: 26px; }
+  .valuation-aside h2 { font-size: clamp(2.85rem, 9vw, 3.7rem); }
+  .benefit-list { margin-top: 36px; }
+  .benefit-list > div { padding: 21px 0; }
+}
+
+@media (max-width: 380px) {
+  .hero-actions, .inner-hero-actions { grid-template-columns: 1fr; }
+  .hero-actions .button, .inner-hero-actions .button { padding-left: 18px; font-size: .79rem; }
+}
+
+@media (max-width: 360px) {
+  .container { width: calc(100% - 40px); }
+  .header-inner { width: calc(100% - 20px); }
+  .brand { font-size: 1.08rem; }
+  .header-contact { width: 44px; }
+  .header-contact svg { width: 17px; height: 17px; }
+  .header-contact .whatsapp-mark { width: 19px; height: 19px; }
+  .menu-toggle { flex-basis: 44px; width: 44px; }
+  .menu-toggle span { left: 11px; }
+  .contact-layout .form-panel, .valuation-layout .form-panel { margin-inline: -20px; padding-inline: 20px; }
+  .footer-links:nth-child(2) { column-gap: 10px; }
+}

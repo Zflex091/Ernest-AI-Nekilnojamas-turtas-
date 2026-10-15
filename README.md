@@ -1,0 +1,12 @@
+# SOLVED Estates website
+
+This folder contains the full website. In Visual Studio Code, press **F5**, choose **Run SOLVED Estates website** if prompted, and the site will open in your browser. Stop it with **Shift+F5**.
+
+Alternatively, open a terminal in this folder and run `npm run dev`, then visit `http://localhost:4173`. Opening `index.html` directly as a file will not load the site correctly because its assets and page links expect a web server.
+
+The pages are generated from content in `app.js` and `template.html`. The visual system is in `design.css`, with the shared base styles in `styles.css`. After content edits, run `npm run build` to regenerate the standalone HTML for every route.
+
+Both enquiry forms submit to FormSubmit at `info@solvedestates.co.uk`. FormSubmit requires the recipient to activate the address via its first confirmation email. Until that step is complete, live delivery is not verified. Test with a real submission after activation.
+
+The local illustrative property photos are in `assets/`. Ten photos are sourced from Unsplash under the [Unsplash License](https://unsplash.com/license): [terraced homes](https://unsplash.com/photos/row-of-traditional-terraced-houses-under-a-blue-sky-FpVRByEUt0I), [neutral kitchen](https://unsplash.com/photos/a-kitchen-with-a-marble-counter-top-and-white-cabinets-JNvfW5rTVF8), [living room](https://unsplash.com/photos/a-living-room-filled-with-furniture-and-a-fire-place-pkIJXMezi_E), [dining room](https://unsplash.com/photos/empty-dining-set-indoors-4a-xheeuZA0), [classic dining room](https://unsplash.com/photos/an-elegant-dining-room-is-well-lit-and-modern-IXktYG7s31o), [traditional houses](https://unsplash.com/photos/row-of-traditional-houses-along-a-street-EKKWHIJKWm8), [neutral bedroom](https://unsplash.com/photos/a-neutral-bedroom-with-a-large-bed-and-wooden-wardrobe-Xbe5BfScmvM), [bright living room](https://unsplash.com/photos/a-bright-living-room-with-neutral-curtains-G8jWN3-S6XE), [warm kitchen](https://unsplash.com/photos/modern-kitchen-with-island-and-bar-stools-qslhV6cdYGw), and [farmhouse kitchen](https://unsplash.com/photos/modern-kitchen-with-island-and-pendant-lights-i6SOaGYmNOA). Additional illustrative photos in this project were generated for this website. They are not active property listings. The outlined WhatsApp mark comes from [Tabler Icons](https://github.com/tabler/tabler-icons).
+

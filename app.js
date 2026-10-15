@@ -29,7 +29,7 @@ const pages = {
     ],
     statement: '£1,500 fixed selling fee. No percentage commission.',
     closingTitle: 'Ready to sell?', closing: [],
-    action: 'Book a valuation', href: '/valuation'
+    action: 'Get in touch', href: '/contact'
   },
   letting: {
     nav: 'Lettings', eyebrow: 'Lettings', title: 'Let with confidence.', intro: 'The right tenant. Ongoing support.',

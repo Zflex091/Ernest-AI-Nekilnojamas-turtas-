@@ -646,3 +646,19 @@ html { scroll-padding-top: 86px; }
     margin-top: clamp(32px, 3vw, 48px);
   }
 }
+
+/* Match the Home introduction to the Lettings introduction without changing other pages. */
+.home-hero .hero-intro {
+  max-width: 530px;
+  margin: 34px 0 36px;
+  padding-left: 24px;
+  border-left: 2px solid var(--accent);
+  color: var(--ink);
+  font-family: Newsreader,Georgia,serif;
+  font-size: clamp(1.22rem,1.55vw,1.5rem);
+  line-height: 1.28;
+  letter-spacing: -.02em;
+}
+@media (max-width: 760px) {
+  .home-hero .hero-intro { font-size: 1.25rem; margin-top: 25px; padding-left: 18px; }
+}
